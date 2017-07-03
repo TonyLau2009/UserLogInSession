@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.joce.userloginsession.LoginActivity"
+    tools:showIn="@layout/activity_login">
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/rolbox"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:id="@+id/ivIcon"
+        android:background="@drawable/img_icon"/>
+
+    <EditText
+        android:id="@+id/edtUname"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="50dp"
+        android:layout_below="@+id/ivIcon"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/user_edt"/>
+
+
+    <TextView
+        android:text="email:"
+        android:textSize="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvName"
+        android:layout_above="@+id/edtPasswds"
+        android:layout_alignLeft="@+id/edtUname"
+        android:layout_alignTop="@+id/edtUname"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/edtPasswds"
+        android:paddingLeft="50dp"
+        android:layout_below="@+id/edtUname"
+        android:layout_alignLeft="@+id/edtUname"
+        android:layout_alignRight="@+id/edtUname"
+        android:background="@drawable/pass_edt"
+        />
+
+    <TextView
+        android:text="password:"
+        android:textSize="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtPasswds"
+        android:layout_alignTop="@+id/edtPasswds"
+        android:id="@+id/tvPass"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="7dp"/>
+
+    <ImageButton
+        android:id="@+id/List_Indicator"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:srcCompat="@drawable/list_down"
+        android:layout_alignTop="@+id/edtUname"
+        android:layout_alignRight="@+id/edtUname"
+        android:layout_marginTop="9dp"
+        android:layout_marginRight="5dp"
+       />
+
+    <ImageButton
+        android:id="@+id/edt_delete_btn"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:srcCompat="@drawable/delete"
+        android:layout_alignTop="@+id/edtUname"
+        android:layout_alignRight="@+id/edtUname"
+        android:layout_marginTop="9dp"
+        android:layout_marginRight="32dp"
+        android:visibility="gone" />
+
+    <Button
+        android:text="LOG IN"
+        android:textSize="18dp"
+        android:textColor="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/edtPasswds"
+        android:layout_alignLeft="@+id/edtPasswds"
+        android:layout_alignStart="@+id/edtPasswds"
+        android:layout_marginTop="29dp"
+        android:id="@+id/btnLogin"
+        android:layout_alignRight="@id/edtPasswds"
+        android:layout_alignEnd="@id/edtPasswds"
+        android:background="@drawable/login_btn"/>
+
+    <ListView
+        android:id="@+id/user_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/edtUname"
+        android:layout_alignLeft="@id/edtUname"
+        android:layout_alignRight="@id/edtUname"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:focusableInTouchMode="true"
+        android:divider="#aaaaaa"
+        android:dividerHeight="0px"/>
+
+</RelativeLayout>
